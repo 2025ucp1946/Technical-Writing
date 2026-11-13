@@ -95,3 +95,71 @@ Ravi & 85 \\
 ## What I learned
 
 I learned how to create a document, add headings and lists, format text, write equations, and make tables using LaTeX.
+
+
+## Example and expected output
+
+For the basic file above, compile `main.tex` in Overleaf or another LaTeX editor.
+
+The generated PDF will look approximately like this:
+
+\`\`\`text
+             My First Document
+                Student Name
+             [Current date]
+
+1  Introduction
+This is my first LaTeX document.
+
+2  Conclusion
+LaTeX makes documents neat and organized.
+\`\`\`
+
+The exact spacing and date depend on the compiler and when you compile it.
+
+### Example: formatting text
+
+Code:
+
+\`\`\`latex
+Normal text, \textbf{bold text}, and \textit{italic text}.
+\`\`\`
+
+Expected PDF text:
+
+\`\`\`text
+Normal text, bold text, and italic text.
+\`\`\`
+
+The words marked with \textbf are bold, and the words marked with \textit are italic.
+
+### Example: list output
+
+The itemize example produces a bulleted list:
+
+- First point
+- Second point
+
+The enumerate example produces a numbered list:
+
+1. First step
+2. Second step
+
+### Example: equation output
+
+The code \`\\[a^2 + b^2 = c^2\\]\` displays a centered equation:
+
+\[
+a^2 + b^2 = c^2
+\]
+
+### Example: table output
+
+The table code produces a two-column table:
+
+| Name | Marks |
+|---|---:|
+| Asha | 90 |
+| Ravi | 85 |
+
+These are examples of the PDF result; LaTeX source code itself is not the final formatted document.
