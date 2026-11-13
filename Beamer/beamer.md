@@ -82,3 +82,65 @@ Place the theme command before `\begin{document}`.
 ## What I learned
 
 I learned how to make slides using LaTeX, add titles and bullet points, insert images, and apply themes.
+
+
+## Example and expected slide output
+
+Compile \`presentation.tex\`. The result is a PDF presentation with three slides.
+
+**Slide 1 – Title slide**
+
+\`\`\`text
+My First Presentation
+
+Student Name
+[Current date]
+\`\`\`
+
+**Slide 2 – Introduction**
+
+\`\`\`text
+Introduction
+
+This is my first slide.
+\`\`\`
+
+**Slide 3 – Topics**
+
+\`\`\`text
+Topics
+
+• First topic
+• Second topic
+• Third topic
+\`\`\`
+
+The actual appearance depends on the selected Beamer theme.
+
+### Example: reveal content step by step
+
+Code:
+
+\`\`\`latex
+\begin{frame}{Steps}
+  First point
+  \pause
+  Second point
+\end{frame}
+\`\`\`
+
+Expected result: the first point appears first. The second point appears on the next presentation step.
+
+### Example: use a theme
+
+Add this before \`\\begin{document}\`:
+
+\`\`\`latex
+\usetheme{Madrid}
+\`\`\`
+
+Expected result: the slides use the Madrid theme's colors and layout.
+
+### Example: add an image
+
+If \`image.png\` is in the same folder as the LaTeX file, the image is displayed on the slide. If the file is missing or the name is incorrect, compilation may report an error.
