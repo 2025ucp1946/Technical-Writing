@@ -78,3 +78,69 @@ This downloads the repository and its history to your computer.
 ## What I learned
 
 I learned how to create repositories, upload projects, use README files, work with branches, and collaborate using pull requests.
+
+
+## Practical example: publish a project
+
+Assume a local folder named \`my-project\` contains a file named \`hello.txt\`.
+
+Run:
+
+\`\`\`bash
+cd my-project
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/USERNAME/my-project.git
+git push -u origin main
+\`\`\`
+
+Replace \`USERNAME\` and the repository name with your own GitHub details.
+
+Expected result on GitHub:
+
+- A repository named \`my-project\` is visible in your account.
+- The \`hello.txt\` file appears in the file list.
+- The commit message \`Initial commit\` appears in the commit history.
+- The default branch is \`main\`.
+
+## Example: create and merge a pull request
+
+Suppose I want to add a file called \`notes.txt\`.
+
+Run locally:
+
+\`\`\`bash
+git switch -c add-notes
+echo "My project notes" > notes.txt
+git add notes.txt
+git commit -m "Add project notes"
+git push -u origin add-notes
+\`\`\`
+
+Then on GitHub:
+
+1. Open the repository.
+2. Select **Compare & pull request** (if shown), or open the **Pull requests** tab and select **New pull request**.
+3. Set the base branch to \`main\` and compare branch to \`add-notes\`.
+4. Create and review the pull request.
+5. Select **Merge pull request** when ready.
+
+Expected result: \`notes.txt\` is included in the \`main\` branch after the pull request is merged. On your computer, update your local main branch with:
+
+\`\`\`bash
+git switch main
+git pull origin main
+\`\`\`
+
+## Example: create an Issue
+
+A sample issue could be:
+
+\`\`\`text
+Title: Correct spelling in README
+Description: The project README contains a spelling mistake.
+\`\`\`
+
+Expected result: GitHub creates an issue page where team members can discuss and track the task.
